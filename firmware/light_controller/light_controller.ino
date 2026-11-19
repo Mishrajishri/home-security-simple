@@ -18,8 +18,8 @@ Preferences prefs;
 const char* WIFI_SSID     = "Shri IOT";
 const char* WIFI_PASSWORD = "12345678";
 
-// Laptop IP on the "Shri IOT" hotspot — update if your laptop IP changes
-const char* MQTT_SERVER   = "10.166.88.31";
+// Laptop IP on the "Shri IOT" WiFi — update if your laptop IP changes
+const char* MQTT_SERVER   = "10.90.241.31";
 const int   MQTT_PORT     = 1883;
 const char* MQTT_CLIENT   = "esp32-lights";
 
