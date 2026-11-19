@@ -1,0 +1,28 @@
+** Drc report for door_security_user_saved.kicad_pcb **
+** Created on 2026-11-18T18:43:04 **
+** Report includes: Errors, Warnings **
+
+** Found 2 DRC violations **
+[track_dangling]: Track has unconnected end
+    Local override; warning
+    @(87.5000 mm, 131.0000 mm): Track [LED_RED] on B.Cu, length 0.0566 mm
+[track_dangling]: Track has unconnected end
+    Local override; warning
+    @(87.5000 mm, 121.0000 mm): Track [LED_RED] on B.Cu, length 3.5000 mm
+
+** Found 1 unconnected pads **
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(87.5000 mm, 121.0000 mm): Track [LED_RED] on B.Cu, length 3.5000 mm
+    @(87.5000 mm, 131.0000 mm): Track [LED_RED] on B.Cu, length 0.0566 mm
+
+** Found 0 Footprint errors **
+
+** Ignored checks **
+    - Footprint has no courtyard defined
+    - Track endpoint not centered on via
+    - Tuning profile track geometries
+    - Footprint doesn't match symbol's footprint filters
+    - Footprint component type doesn't match footprint pads
+
+** End of Report **

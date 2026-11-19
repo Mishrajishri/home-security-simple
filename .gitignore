@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# SQLite Database files
+server/db/*.db
+server/db/*.db-journal
+server/db/*.db-wal
+server/db/*.db-shm
+*.db
+
+# Voice recognition models (download via: node server/voice/download-models.js)
+server/voice/models/
+
+# Self-signed SSL Certificates (generate via: node server/certs/generate-cert.js)
+server/certs/*.key
+server/certs/*.cert
+
+# Logs & temporary files
+*.log
+*.bak
+*.tmp

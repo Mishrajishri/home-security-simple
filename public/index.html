@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="VidyutRakshak — Smart Energy Saving, Security & Home Automation Dashboard. Vigyan Mela 2026.">
+  <title>VidyutRakshak — ऊर्जा रक्षक</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css?v=2">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  <!-- Apply saved theme immediately to prevent flash -->
+  <script>
+    (function() {
+      var t = localStorage.getItem('vr-theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- ── Energy Saving Banner ──────────────────────────── -->
+  <div class="energy-banner" id="energy-banner">
+    <svg class="energy-banner__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+    <span>विद्युत रक्षक — Smart automation saves up to <strong>40% electricity</strong> by turning off unused lights & devices automatically</span>
+    <button class="energy-banner__close" id="close-banner" aria-label="Close">✕</button>
+  </div>
+
+  <!-- ── Header ─────────────────────────────────────────── -->
+  <header class="header" id="main-header">
+    <div class="header__left">
+      <div class="header__logo">
+        <div class="header__logo-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+          </svg>
+        </div>
+        <div>
+          <h1 class="header__title">VidyutRakshak</h1>
+          <span class="header__hindi">विद्युत रक्षक • ऊर्जा बचाओ</span>
+        </div>
+      </div>
+      <div class="header__badges">
+        <span class="badge badge--eco">🌿 Eco Smart</span>
+        <span class="badge badge--vigyan">🔬 Vigyan Mela 2026</span>
+      </div>
+    </div>
+    <div class="header__right">
+      <!-- Energy saved counter -->
+      <div class="energy-counter" id="energy-counter" title="Estimated energy saved this session">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        <div>
+          <span class="energy-counter__value" id="energy-saved-val">0.0</span>
+          <span class="energy-counter__unit">Wh saved</span>
+        </div>
+      </div>
+      <div class="esp-status" id="esp-status">
+        <div class="esp-status__board" id="esp-board-lights" title="ESP32-A: Lights + Sensors">
+          <span class="esp-status__dot esp-status__dot--offline"></span>
+          <span class="esp-status__label">Lights ESP</span>
+        </div>
+        <div class="esp-status__board" id="esp-board-door" title="ESP32-B: Door Security">
+          <span class="esp-status__dot esp-status__dot--offline"></span>
+          <span class="esp-status__label">Door ESP</span>
+        </div>
+      </div>
+      <div class="connection-status" id="connection-status">
+        <span class="connection-status__dot"></span>
+        <span class="connection-status__text">Connecting...</span>
+      </div>
+      <div class="header__time" id="header-time"></div>
+      <!-- Day / Night Mode Toggle -->
+      <button class="theme-toggle" id="theme-toggle" title="Switch between Day and Night mode" aria-label="Toggle day/night mode">
+        <span class="theme-toggle__icon" id="theme-icon">☀️</span>
+        <span id="theme-label">Day</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ── Stats Bar ─────────────────────────────────────── -->
+  <section class="stats-bar" id="stats-bar">
+    <div class="stat-card" id="stat-lights-on">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg>
+      <div>
+        <span class="stat-card__value" id="lights-on-count">0</span>
+        <span class="stat-card__label">Lights On</span>
+      </div>
+    </div>
+    <div class="stat-card" id="stat-lights-off">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" opacity="0.5"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/><line x1="2" y1="2" x2="22" y2="22" stroke="currentColor"/></svg>
+      <div>
+        <span class="stat-card__value" id="lights-off-count">0</span>
+        <span class="stat-card__label">Lights Off</span>
+      </div>
+    </div>
+    <div class="stat-card" id="stat-security">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      <div>
+        <span class="stat-card__value" id="security-status-text">Secure</span>
+        <span class="stat-card__label">Security</span>
+      </div>
+    </div>
+    <div class="stat-card" id="stat-automations">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/><path d="M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
+      <div>
+        <span class="stat-card__value">Auto</span>
+        <span class="stat-card__label">MQTT + Voice</span>
+      </div>
+    </div>
+    <div class="stat-card stat-card--highlight" id="stat-co2">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 22 L12 2 L22 22 Z"/><line x1="12" y1="22" x2="12" y2="12"/></svg>
+      <div>
+        <span class="stat-card__value" id="co2-saved-val">0</span>
+        <span class="stat-card__label">g CO₂ Saved</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Quick Actions Bar ──────────────────────────────── -->
+  <section class="quick-actions" id="quick-actions">
+    <button class="quick-btn quick-btn--lights-off" id="btn-all-lights-off" title="Save energy — turn all lights off">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg>
+      ⚡ Save Energy (All Off)
+    </button>
+    <button class="quick-btn quick-btn--lock-all" id="btn-lock-all-doors" title="Lock all doors for security">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+      🔒 Secure All Doors
+    </button>
+    <button class="quick-btn quick-btn--refresh" id="btn-refresh" title="Refresh devices">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
+      Refresh
+    </button>
+    <div class="quick-btn quick-btn--info" id="voice-status-pill" title="Voice control status">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+      🎙️ Voice: Checking...
+    </div>
+  </section>
+
+  <!-- ── Main Content ───────────────────────────────────── -->
+  <main class="main-content">
+
+    <!-- ── Energy Tip Card ──────────────────────────────── -->
+    <div class="energy-tip-card" id="energy-tip-card">
+      <div class="energy-tip-card__icon">💡</div>
+      <div class="energy-tip-card__text">
+        <strong>Did you know?</strong> <span id="tip-text">Smart home automation can reduce household electricity consumption by 20–40% by eliminating standby power waste and automating lights based on occupancy.</span>
+      </div>
+      <button class="energy-tip-card__next" id="btn-next-tip" title="Next tip">→</button>
+    </div>
+
+    <!-- ── Devices Grid ─────────────────────────────────── -->
+    <section class="section" id="devices-section">
+      <div class="section__header">
+        <h2 class="section__title">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          Smart Devices
+          <span class="section__subtitle">ऑटो-कंट्रोल</span>
+        </h2>
+        <span class="section__badge" id="device-count">0</span>
+      </div>
+      <div class="device-grid" id="device-grid">
+        <!-- Device cards injected by JS -->
+      </div>
+      <div class="empty-state" id="empty-state" style="display: none;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        <p>No devices found.</p>
+        <span>Devices will appear here once ESP32 modules connect.</span>
+      </div>
+    </section>
+
+    <!-- ── Energy Impact Section ────────────────────────── -->
+    <section class="section energy-impact-section" id="energy-impact-section">
+      <div class="section__header">
+        <h2 class="section__title">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          Energy Impact
+          <span class="section__subtitle">ऊर्जा प्रभाव</span>
+        </h2>
+      </div>
+      <div class="impact-grid">
+        <div class="impact-card">
+          <div class="impact-card__label">💡 Est. Power (Active Lights)</div>
+          <div class="impact-card__value"><span id="est-power">0</span> W</div>
+          <div class="impact-card__sub">@ 10W per LED bulb</div>
+        </div>
+        <div class="impact-card">
+          <div class="impact-card__label">⚡ Wh Consumed (session)</div>
+          <div class="impact-card__value"><span id="wh-consumed">0.0</span> Wh</div>
+          <div class="impact-card__sub">Since server started</div>
+        </div>
+        <div class="impact-card impact-card--green">
+          <div class="impact-card__label">🌿 CO₂ Not Emitted</div>
+          <div class="impact-card__value"><span id="co2-not-emitted">0</span> g</div>
+          <div class="impact-card__sub">0.82 g CO₂ per Wh (India grid)</div>
+        </div>
+        <div class="impact-card impact-card--blue">
+          <div class="impact-card__label">💰 Money Saved</div>
+          <div class="impact-card__value">₹<span id="money-saved">0.00</span></div>
+          <div class="impact-card__sub">@ ₹8 per kWh (avg India)</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Bottom panels row ─────────────────────────────── -->
+    <div class="panels-row">
+      <!-- RFID Security Panel -->
+      <section class="section panel" id="rfid-section">
+        <div class="section__header">
+          <h2 class="section__title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            RFID Security
+            <span class="section__subtitle">सुरक्षा</span>
+          </h2>
+        </div>
+        <!-- Add Card Form -->
+        <form class="rfid-form" id="rfid-form">
+          <input type="text" id="rfid-uid" placeholder="Card UID" class="input" required>
+          <input type="text" id="rfid-owner" placeholder="Owner name" class="input" required>
+          <button type="submit" class="btn btn--primary" id="btn-add-rfid">Add Card</button>
+        </form>
+        <!-- Keypad PIN Settings -->
+        <div class="keypad-pin-box" style="margin: 1rem 0; padding: 0.9rem; background: var(--card-bg-subtle, rgba(255,255,255,0.03)); border: 1px solid var(--border); border-radius: 8px;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+            <h3 class="subsection-title" style="margin: 0; font-size: 0.95rem;">🔢 Door Keypad PIN</h3>
+            <span style="font-size: 0.8rem; color: var(--text-muted);">Active PIN: <strong id="current-pin-display" style="color: var(--accent); font-family: monospace;">••••</strong></span>
+          </div>
+          <form id="door-pin-form" style="display: flex; gap: 0.5rem;">
+            <input type="password" id="door-pin-input" placeholder="New 4-8 digit PIN" class="input" pattern="[0-9A-D]{4,8}" maxlength="8" style="flex: 1;" required>
+            <button type="button" id="btn-toggle-pin" class="btn btn--ghost btn--sm" style="padding: 0 0.6rem;" title="Show/Hide PIN">👁️</button>
+            <button type="submit" class="btn btn--primary btn--sm" id="btn-save-pin">Update PIN</button>
+          </form>
+        </div>
+        <!-- Card List -->
+        <div class="rfid-cards-list" id="rfid-cards-list">
+          <p class="muted">No cards registered yet.</p>
+        </div>
+        <!-- Recent RFID Events -->
+        <div class="rfid-events" id="rfid-events">
+          <h3 class="subsection-title">Recent Scans</h3>
+          <div class="rfid-events-list" id="rfid-events-list">
+            <p class="muted">No scans yet.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Activity Log Panel -->
+      <section class="section panel" id="log-section">
+        <div class="section__header">
+          <h2 class="section__title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            Activity Log
+            <span class="section__subtitle">गतिविधि</span>
+          </h2>
+          <button class="btn btn--ghost btn--sm" id="btn-clear-log" title="Clear log display">Clear</button>
+        </div>
+        <div class="log-list" id="log-list">
+          <p class="muted">Waiting for events...</p>
+        </div>
+      </section>
+    </div>
+
+    <!-- ── How It Works Section ─────────────────────────── -->
+    <section class="section how-it-works" id="how-it-works">
+      <div class="section__header">
+        <h2 class="section__title">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          How VidyutRakshak Saves Energy
+        </h2>
+      </div>
+      <div class="how-grid">
+        <div class="how-card">
+          <div class="how-card__icon">🎙️</div>
+          <h3>Voice Control</h3>
+          <p>Say <em>"Turn off all lights"</em> or <em>"सभी लाइटें बंद करो"</em> — no need to walk to switches. Reduces habit of leaving lights on.</p>
+        </div>
+        <div class="how-card">
+          <div class="how-card__icon">📡</div>
+          <h3>MQTT Automation</h3>
+          <p>ESP32 sensors detect occupancy and gas levels. Lights auto-off when no motion. Gas detected → alert sent instantly.</p>
+        </div>
+        <div class="how-card">
+          <div class="how-card__icon">🔐</div>
+          <h3>RFID Security</h3>
+          <p>No keys needed. RFID cards grant access — no standing outside wasting time. Every entry is logged for safety.</p>
+        </div>
+        <div class="how-card">
+          <div class="how-card__icon">📊</div>
+          <h3>Real-Time Monitoring</h3>
+          <p>Live dashboard shows exactly which devices are on. Helps identify wasted electricity instantly from any device.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── Footer ────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <span>⚡ <strong>VidyutRakshak</strong> — विद्युत रक्षक</span>
+      <span class="footer__sep">•</span>
+      <span>🔬 Vigyan Mela 2026</span>
+      <span class="footer__sep">•</span>
+      <span>🌿 Energy · Security · Automation</span>
+    </div>
+  </footer>
+
+  <!-- ── Toast Container ────────────────────────────────── -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- ── Scripts ────────────────────────────────────────── -->
+  <script src="/js/websocket.js?v=2"></script>
+  <script src="/js/devices.js?v=2"></script>
+  <script src="/js/logs.js?v=2"></script>
+  <script src="/js/notifications.js?v=2"></script>
+  <script src="/js/voice.js?v=2"></script>
+  <script src="/js/app.js?v=2"></script>
+  <script src="/js/energy.js?v=2"></script>
+</body>
+</html>

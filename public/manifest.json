@@ -1,0 +1,10 @@
+{
+  "name": "Home Control — Shrimaan",
+  "short_name": "Home Control",
+  "description": "Home Automation & Security Dashboard with Voice Assistant",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f1117",
+  "theme_color": "#2dd4a8",
+  "icons": []
+}

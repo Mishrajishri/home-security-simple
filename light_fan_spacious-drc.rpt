@@ -1,0 +1,595 @@
+** Drc report for light_fan_spacious.kicad_pcb **
+** Created on 2026-11-18T14:41:10 **
+** Report includes: Errors, Warnings **
+
+** Found 155 DRC violations **
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(28.0000 mm, 134.0000 mm): Track [GND] on B.Cu, length 24.0000 mm
+    @(20.0000 mm, 134.0000 mm): Track [+5V] on B.Cu, length 8.0000 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(8.0000 mm, 88.9200 mm): Track [GND] on B.Cu, length 4.0000 mm
+    @(6.0000 mm, 90.9600 mm): Track [PIR_OUT] on B.Cu, length 27.6000 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(8.0000 mm, 73.0200 mm): Track [GND] on B.Cu, length 4.0000 mm
+    @(6.0000 mm, 90.9600 mm): Track [PIR_OUT] on B.Cu, length 27.6000 mm
+[shorting_items]: Items shorting two nets (nets GND and RELAY_3)
+    Local override; error
+    @(45.9200 mm, 73.0200 mm): Track [GND] on B.Cu, length 12.5200 mm
+    @(38.3000 mm, 73.0000 mm): PTH pad 1 [RELAY_3] of R3
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(33.4000 mm, 73.0200 mm): Track [GND] on B.Cu, length 25.4000 mm
+    @(25.0000 mm, 68.4400 mm): Track [ESP_LED] on B.Cu, length 22.0600 mm
+[shorting_items]: Items shorting two nets (nets +5V and GND)
+    Local override; error
+    @(12.0000 mm, 114.0000 mm): PTH pad 1 [+5V] of C1
+    @(25.0000 mm, 114.0000 mm): Track [GND] on B.Cu, length 21.0000 mm
+[shorting_items]: Items shorting two nets (nets GND and +5V)
+    Local override; error
+    @(12.5400 mm, 14.0000 mm): Track [GND] on B.Cu, length 8.5400 mm
+    @(10.0000 mm, 14.0000 mm): PTH pad 1 [+5V] of J_GAS
+[shorting_items]: Items shorting two nets (nets +5V and GND)
+    Local override; error
+    @(8.0000 mm, 94.0000 mm): PTH pad 1 [+5V] of J_PIR
+    @(22.0000 mm, 94.3800 mm): Track [GND] on B.Cu, length 18.0000 mm
+[shorting_items]: Items shorting two nets (nets ESP_GAS and GND)
+    Local override; error
+    @(18.0000 mm, 25.0000 mm): PTH pad 1 [ESP_GAS] of RDIV2
+    @(25.6200 mm, 25.0000 mm): Track [GND] on B.Cu, length 21.6200 mm
+[shorting_items]: Items shorting two nets (nets +5V and GND)
+    Local override; error
+    @(46.1600 mm, 126.0000 mm): PTH pad 2 [+5V] of JMP_5V
+    @(45.9200 mm, 8.0000 mm): Track [GND] on B.Cu, length 126.0000 mm
+[shorting_items]: Items shorting two nets (nets +5V and GND)
+    Local override; error
+    @(8.0000 mm, 94.0000 mm): Track [+5V] on B.Cu, length 4.0000 mm
+    @(22.0000 mm, 94.3800 mm): Track [GND] on B.Cu, length 18.0000 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(15.5000 mm, 114.0000 mm): Track [GND] on B.Cu, length 11.5000 mm
+    @(12.0000 mm, 114.0000 mm): Track [+5V] on B.Cu, length 12.0000 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(12.0000 mm, 125.0000 mm): Track [+5V] on B.Cu, length 48.4400 mm
+    @(22.0000 mm, 94.3800 mm): Track [GND] on B.Cu, length 18.0000 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(11.2000 mm, 14.0000 mm): Track [+5V] on B.Cu, length 1.2000 mm
+    @(12.5400 mm, 14.0000 mm): Track [GND] on B.Cu, length 8.5400 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(12.0000 mm, 114.0000 mm): Track [+5V] on B.Cu, length 12.0000 mm
+    @(25.0000 mm, 114.0000 mm): Track [GND] on B.Cu, length 21.0000 mm
+[shorting_items]: Items shorting two nets (nets +5V and GND)
+    Local override; error
+    @(57.0000 mm, 126.0000 mm): Track [+5V] on B.Cu, length 10.8400 mm
+    @(45.9200 mm, 8.0000 mm): Track [GND] on B.Cu, length 126.0000 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(12.0000 mm, 14.8000 mm): Track [+5V] on B.Cu, length 1.1314 mm
+    @(12.5400 mm, 14.0000 mm): Track [GND] on B.Cu, length 8.5400 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(12.0000 mm, 75.5600 mm): Track [+5V] on B.Cu, length 60.7600 mm
+    @(33.4000 mm, 73.0200 mm): Track [GND] on B.Cu, length 25.4000 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(18.0000 mm, 24.5000 mm): Track [ESP_GAS] on B.Cu, length 0.7071 mm
+    @(25.6200 mm, 25.0000 mm): Track [GND] on B.Cu, length 21.6200 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(17.5000 mm, 25.0000 mm): Track [ESP_GAS] on B.Cu, length 11.0000 mm
+    @(12.0000 mm, 75.5600 mm): Track [+5V] on B.Cu, length 60.7600 mm
+[shorting_items]: Items shorting two nets (nets ESP_GAS and GND)
+    Local override; error
+    @(18.0000 mm, 20.0000 mm): Track [ESP_GAS] on B.Cu, length 4.5000 mm
+    @(25.6200 mm, 25.0000 mm): Track [GND] on B.Cu, length 21.6200 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(6.5000 mm, 25.0000 mm): Track [ESP_GAS] on B.Cu, length 0.7071 mm
+    @(25.6200 mm, 25.0000 mm): Track [GND] on B.Cu, length 21.6200 mm
+[shorting_items]: Items shorting two nets (nets ESP_GAS and GND)
+    Local override; error
+    @(6.0000 mm, 25.5000 mm): Track [ESP_GAS] on B.Cu, length 21.6200 mm
+    @(25.6200 mm, 25.0000 mm): Track [GND] on B.Cu, length 21.6200 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(22.0000 mm, 91.5000 mm): Track [ESP_LED] on B.Cu, length 5.0400 mm
+    @(22.0000 mm, 94.3800 mm): Track [GND] on B.Cu, length 18.0000 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(22.0000 mm, 94.0000 mm): Track [STAT_LED_K] on B.Cu, length 8.0000 mm
+    @(22.0000 mm, 94.3800 mm): Track [GND] on B.Cu, length 18.0000 mm
+[shorting_items]: Items shorting two nets (nets PWR_LED and GND)
+    Local override; error
+    @(27.6200 mm, 134.0000 mm): Track [PWR_LED] on B.Cu, length 2.1600 mm
+    @(28.0000 mm, 134.0000 mm): PTH pad 1 [GND] of LED_PWR
+[shorting_items]: Items shorting two nets (nets GND and STAT_LED_K)
+    Local override; error
+    @(22.0000 mm, 94.3800 mm): PTH pad 2 [GND] of R_STAT
+    @(22.0000 mm, 94.0000 mm): PTH pad 1 [STAT_LED_K] of LED_STAT
+[shorting_items]: Items shorting two nets (nets PWR_LED and GND)
+    Local override; error
+    @(27.6200 mm, 134.0000 mm): PTH pad 2 [PWR_LED] of R_PWR
+    @(28.0000 mm, 134.0000 mm): PTH pad 1 [GND] of LED_PWR
+[shorting_items]: Items shorting two nets (nets PWR_LED and GND)
+    Local override; error
+    @(27.6200 mm, 134.0000 mm): PTH pad 2 [PWR_LED] of R_PWR
+    @(28.0000 mm, 134.0000 mm): PTH pad 1 [GND] of LED_PWR
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0100 mm)
+    Local override; error
+    @(22.0000 mm, 94.3800 mm): PTH pad 2 [GND] of R_STAT
+    @(22.0000 mm, 96.5400 mm): PTH pad 2 [ESP_LED] of LED_STAT
+[shorting_items]: Items shorting two nets (nets GND and STAT_LED_K)
+    Local override; error
+    @(22.0000 mm, 94.3800 mm): PTH pad 2 [GND] of R_STAT
+    @(22.0000 mm, 94.0000 mm): PTH pad 1 [STAT_LED_K] of LED_STAT
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0100 mm)
+    Local override; error
+    @(22.0000 mm, 94.3800 mm): PTH pad 2 [GND] of R_STAT
+    @(22.0000 mm, 96.5400 mm): PTH pad 2 [ESP_LED] of LED_STAT
+[courtyards_overlap]: Courtyards overlap
+    Rule: board setup constraints courtyard; error
+    @(22.0000 mm, 102.0000 mm): Footprint R_STAT
+    @(22.0000 mm, 94.0000 mm): Footprint LED_STAT
+[pth_inside_courtyard]: PTH inside courtyard
+    Local override; error
+    @(22.0000 mm, 94.0000 mm): PTH pad 1 [STAT_LED_K] of LED_STAT
+    @(22.0000 mm, 102.0000 mm): Footprint R_STAT
+[pth_inside_courtyard]: PTH inside courtyard
+    Local override; error
+    @(22.0000 mm, 96.5400 mm): PTH pad 2 [ESP_LED] of LED_STAT
+    @(22.0000 mm, 102.0000 mm): Footprint R_STAT
+[pth_inside_courtyard]: PTH inside courtyard
+    Local override; error
+    @(22.0000 mm, 94.3800 mm): PTH pad 2 [GND] of R_STAT
+    @(22.0000 mm, 94.0000 mm): Footprint LED_STAT
+[courtyards_overlap]: Courtyards overlap
+    Rule: board setup constraints courtyard; error
+    @(20.0000 mm, 134.0000 mm): Footprint R_PWR
+    @(28.0000 mm, 134.0000 mm): Footprint LED_PWR
+[pth_inside_courtyard]: PTH inside courtyard
+    Local override; error
+    @(28.0000 mm, 134.0000 mm): PTH pad 1 [GND] of LED_PWR
+    @(20.0000 mm, 134.0000 mm): Footprint R_PWR
+[pth_inside_courtyard]: PTH inside courtyard
+    Local override; error
+    @(25.4600 mm, 134.0000 mm): PTH pad 2 [PWR_LED] of LED_PWR
+    @(20.0000 mm, 134.0000 mm): Footprint R_PWR
+[pth_inside_courtyard]: PTH inside courtyard
+    Local override; error
+    @(27.6200 mm, 134.0000 mm): PTH pad 2 [PWR_LED] of R_PWR
+    @(28.0000 mm, 134.0000 mm): Footprint LED_PWR
+[courtyards_overlap]: Courtyards overlap
+    Rule: board setup constraints courtyard; error
+    @(51.0000 mm, 59.5100 mm): Footprint R_LED2
+    @(51.0000 mm, 51.8900 mm): Footprint Q2
+[pth_inside_courtyard]: PTH inside courtyard
+    Local override; error
+    @(51.0000 mm, 51.8900 mm): PTH pad 1 [Q2_COLL] of Q2
+    @(51.0000 mm, 59.5100 mm): Footprint R_LED2
+[pth_inside_courtyard]: PTH inside courtyard
+    Local override; error
+    @(51.0000 mm, 51.8900 mm): PTH pad 2 [Q2_COLL] of R_LED2
+    @(51.0000 mm, 51.8900 mm): Footprint Q2
+[courtyards_overlap]: Courtyards overlap
+    Rule: board setup constraints courtyard; error
+    @(51.0000 mm, 31.5100 mm): Footprint R_LED1
+    @(51.0000 mm, 23.8900 mm): Footprint Q1
+[pth_inside_courtyard]: PTH inside courtyard
+    Local override; error
+    @(51.0000 mm, 23.8900 mm): PTH pad 1 [Q1_COLL] of Q1
+    @(51.0000 mm, 31.5100 mm): Footprint R_LED1
+[pth_inside_courtyard]: PTH inside courtyard
+    Local override; error
+    @(51.0000 mm, 23.8900 mm): PTH pad 2 [Q1_COLL] of R_LED1
+    @(51.0000 mm, 23.8900 mm): Footprint Q1
+[courtyards_overlap]: Courtyards overlap
+    Rule: board setup constraints courtyard; error
+    @(51.0000 mm, 79.8900 mm): Footprint Q3
+    @(51.0000 mm, 87.5100 mm): Footprint R_LED3
+[pth_inside_courtyard]: PTH inside courtyard
+    Local override; error
+    @(51.0000 mm, 79.8900 mm): PTH pad 2 [Q3_COLL] of R_LED3
+    @(51.0000 mm, 79.8900 mm): Footprint Q3
+[pth_inside_courtyard]: PTH inside courtyard
+    Local override; error
+    @(51.0000 mm, 79.8900 mm): PTH pad 1 [Q3_COLL] of Q3
+    @(51.0000 mm, 87.5100 mm): Footprint R_LED3
+[courtyards_overlap]: Courtyards overlap
+    Rule: board setup constraints courtyard; error
+    @(51.0000 mm, 115.5100 mm): Footprint R_LED4
+    @(51.0000 mm, 107.8900 mm): Footprint Q4
+[pth_inside_courtyard]: PTH inside courtyard
+    Local override; error
+    @(51.0000 mm, 107.8900 mm): PTH pad 1 [Q4_COLL] of Q4
+    @(51.0000 mm, 115.5100 mm): Footprint R_LED4
+[pth_inside_courtyard]: PTH inside courtyard
+    Local override; error
+    @(51.0000 mm, 107.8900 mm): PTH pad 2 [Q4_COLL] of R_LED4
+    @(51.0000 mm, 107.8900 mm): Footprint Q4
+[solder_mask_bridge]: Rear solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(15.5000 mm, 114.0000 mm): Track [GND] on B.Cu, length 11.5000 mm
+    @(12.0000 mm, 114.0000 mm): PTH pad 1 [+5V] of C1
+[solder_mask_bridge]: Rear solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(28.0000 mm, 134.0000 mm): Track [GND] on B.Cu, length 24.0000 mm
+    @(27.6200 mm, 134.0000 mm): PTH pad 2 [PWR_LED] of R_PWR
+[solder_mask_bridge]: Rear solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(28.0000 mm, 134.0000 mm): Track [GND] on B.Cu, length 24.0000 mm
+    @(20.0000 mm, 134.0000 mm): PTH pad 1 [+5V] of R_PWR
+[solder_mask_bridge]: Rear solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(28.0000 mm, 134.0000 mm): Track [GND] on B.Cu, length 24.0000 mm
+    @(25.4600 mm, 134.0000 mm): PTH pad 2 [PWR_LED] of LED_PWR
+[solder_mask_bridge]: Rear solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(45.9200 mm, 73.0200 mm): Track [GND] on B.Cu, length 12.5200 mm
+    @(38.3000 mm, 73.0000 mm): PTH pad 1 [RELAY_3] of R3
+[solder_mask_bridge]: Rear solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(11.2000 mm, 14.0000 mm): Track [+5V] on B.Cu, length 1.2000 mm
+    @(12.5400 mm, 14.0000 mm): PTH pad 2 [GND] of J_GAS
+[solder_mask_bridge]: Rear solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(45.9200 mm, 8.0000 mm): Track [GND] on B.Cu, length 126.0000 mm
+    @(46.1600 mm, 126.0000 mm): PTH pad 2 [+5V] of JMP_5V
+[solder_mask_bridge]: Rear solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(22.0000 mm, 91.5000 mm): Track [ESP_LED] on B.Cu, length 5.0400 mm
+    @(22.0000 mm, 94.3800 mm): PTH pad 2 [GND] of R_STAT
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(22.0000 mm, 94.3800 mm): PTH pad 2 [GND] of R_STAT
+    @(22.0000 mm, 94.0000 mm): PTH pad 1 [STAT_LED_K] of LED_STAT
+[solder_mask_bridge]: Rear solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(25.0000 mm, 114.0000 mm): Track [GND] on B.Cu, length 21.0000 mm
+    @(12.0000 mm, 114.0000 mm): PTH pad 1 [+5V] of C1
+[solder_mask_bridge]: Rear solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(22.0000 mm, 91.5000 mm): Track [ESP_LED] on B.Cu, length 5.0400 mm
+    @(22.0000 mm, 94.0000 mm): PTH pad 1 [STAT_LED_K] of LED_STAT
+[solder_mask_bridge]: Rear solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(12.0000 mm, 14.8000 mm): Track [+5V] on B.Cu, length 1.1314 mm
+    @(12.5400 mm, 14.0000 mm): PTH pad 2 [GND] of J_GAS
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(22.0000 mm, 94.3800 mm): PTH pad 2 [GND] of R_STAT
+    @(22.0000 mm, 96.5400 mm): PTH pad 2 [ESP_LED] of LED_STAT
+[solder_mask_bridge]: Rear solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(25.0000 mm, 114.0000 mm): Track [GND] on B.Cu, length 21.0000 mm
+    @(20.0000 mm, 114.0000 mm): PTH pad 1 [+5V] of C2
+[solder_mask_bridge]: Rear solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(12.0000 mm, 75.5600 mm): Track [+5V] on B.Cu, length 60.7600 mm
+    @(12.5400 mm, 14.0000 mm): PTH pad 2 [GND] of J_GAS
+[solder_mask_bridge]: Rear solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(12.5400 mm, 14.0000 mm): Track [GND] on B.Cu, length 8.5400 mm
+    @(10.0000 mm, 14.0000 mm): PTH pad 1 [+5V] of J_GAS
+[solder_mask_bridge]: Rear solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(22.0000 mm, 94.0000 mm): Track [STAT_LED_K] on B.Cu, length 8.0000 mm
+    @(22.0000 mm, 94.3800 mm): PTH pad 2 [GND] of R_STAT
+[solder_mask_bridge]: Rear solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(22.0000 mm, 94.3800 mm): Track [GND] on B.Cu, length 18.0000 mm
+    @(8.0000 mm, 94.0000 mm): PTH pad 1 [+5V] of J_PIR
+[solder_mask_bridge]: Rear solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(22.0000 mm, 94.0000 mm): Track [STAT_LED_K] on B.Cu, length 8.0000 mm
+    @(22.0000 mm, 96.5400 mm): PTH pad 2 [ESP_LED] of LED_STAT
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(28.0000 mm, 134.0000 mm): PTH pad 1 [GND] of LED_PWR
+    @(27.6200 mm, 134.0000 mm): PTH pad 2 [PWR_LED] of R_PWR
+[solder_mask_bridge]: Rear solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(22.0000 mm, 96.5400 mm): PTH pad 2 [ESP_LED] of LED_STAT
+    @(22.0000 mm, 94.3800 mm): PTH pad 2 [GND] of R_STAT
+[solder_mask_bridge]: Rear solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(22.0000 mm, 94.3800 mm): PTH pad 2 [GND] of R_STAT
+    @(22.0000 mm, 94.0000 mm): PTH pad 1 [STAT_LED_K] of LED_STAT
+[solder_mask_bridge]: Rear solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(27.6200 mm, 134.0000 mm): Track [PWR_LED] on B.Cu, length 2.1600 mm
+    @(28.0000 mm, 134.0000 mm): PTH pad 1 [GND] of LED_PWR
+[solder_mask_bridge]: Rear solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(22.0000 mm, 94.3800 mm): Track [GND] on B.Cu, length 18.0000 mm
+    @(22.0000 mm, 94.0000 mm): PTH pad 1 [STAT_LED_K] of LED_STAT
+[solder_mask_bridge]: Rear solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(28.0000 mm, 134.0000 mm): PTH pad 1 [GND] of LED_PWR
+    @(27.6200 mm, 134.0000 mm): PTH pad 2 [PWR_LED] of R_PWR
+[solder_mask_bridge]: Rear solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(25.6200 mm, 25.0000 mm): Track [GND] on B.Cu, length 21.6200 mm
+    @(18.0000 mm, 25.0000 mm): PTH pad 1 [ESP_GAS] of RDIV2
+[track_dangling]: Track has unconnected end
+    Local override; warning
+    @(28.0000 mm, 134.0000 mm): Track [GND] on B.Cu, length 24.0000 mm
+[track_dangling]: Track has unconnected end
+    Local override; warning
+    @(4.0000 mm, 14.0000 mm): Track [GND] on B.Cu, length 111.0000 mm
+[holes_co_located]: Drilled holes co-located
+    Local override; warning
+    @(48.4600 mm, 101.0000 mm): PTH pad 1 [Q4_BASE] of RPD4
+    @(48.4600 mm, 101.0000 mm): PTH pad 2 [Q4_BASE] of R4
+[hole_to_hole]: Drilled hole too close to other hole (board setup constraints min 0.2500 mm; actual 0.0000 mm)
+    Rule: board setup constraints; warning
+    @(22.0000 mm, 94.3800 mm): PTH pad 2 [GND] of R_STAT
+    @(22.0000 mm, 94.0000 mm): PTH pad 1 [STAT_LED_K] of LED_STAT
+[hole_to_hole]: Drilled hole too close to other hole (board setup constraints min 0.2500 mm; actual 0.0000 mm)
+    Rule: board setup constraints; warning
+    @(27.6200 mm, 134.0000 mm): PTH pad 2 [PWR_LED] of R_PWR
+    @(28.0000 mm, 134.0000 mm): PTH pad 1 [GND] of LED_PWR
+[holes_co_located]: Drilled holes co-located
+    Local override; warning
+    @(51.0000 mm, 51.8900 mm): PTH pad 1 [Q2_COLL] of Q2
+    @(51.0000 mm, 51.8900 mm): PTH pad 2 [Q2_COLL] of R_LED2
+[holes_co_located]: Drilled holes co-located
+    Local override; warning
+    @(48.4600 mm, 17.0000 mm): PTH pad 2 [Q1_BASE] of R1
+    @(48.4600 mm, 17.0000 mm): PTH pad 1 [Q1_BASE] of RPD1
+[holes_co_located]: Drilled holes co-located
+    Local override; warning
+    @(51.0000 mm, 23.8900 mm): PTH pad 1 [Q1_COLL] of Q1
+    @(51.0000 mm, 23.8900 mm): PTH pad 2 [Q1_COLL] of R_LED1
+[holes_co_located]: Drilled holes co-located
+    Local override; warning
+    @(48.4600 mm, 45.0000 mm): PTH pad 1 [Q2_BASE] of RPD2
+    @(48.4600 mm, 45.0000 mm): PTH pad 2 [Q2_BASE] of R2
+[holes_co_located]: Drilled holes co-located
+    Local override; warning
+    @(51.0000 mm, 79.8900 mm): PTH pad 2 [Q3_COLL] of R_LED3
+    @(51.0000 mm, 79.8900 mm): PTH pad 1 [Q3_COLL] of Q3
+[holes_co_located]: Drilled holes co-located
+    Local override; warning
+    @(48.4600 mm, 73.0000 mm): PTH pad 1 [Q3_BASE] of RPD3
+    @(48.4600 mm, 73.0000 mm): PTH pad 2 [Q3_BASE] of R3
+[holes_co_located]: Drilled holes co-located
+    Local override; warning
+    @(51.0000 mm, 107.8900 mm): PTH pad 1 [Q4_COLL] of Q4
+    @(51.0000 mm, 107.8900 mm): PTH pad 2 [Q4_COLL] of R_LED4
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(8.0000 mm, 88.0000 mm): PCB text 'PIR SENSOR' on F.Silkscreen
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(20.6300 mm, 94.9200 mm): Segment of R_STAT on F.Silkscreen
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(20.9600 mm, 101.4600 mm): Segment of R_STAT on F.Silkscreen
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(23.0400 mm, 101.4600 mm): Segment of R_STAT on F.Silkscreen
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(23.3700 mm, 94.9200 mm): Segment of R_STAT on F.Silkscreen
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(20.5400 mm, 132.9600 mm): Segment of R_PWR on F.Silkscreen
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(20.5400 mm, 135.0400 mm): Segment of R_PWR on F.Silkscreen
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(27.0800 mm, 132.6300 mm): Segment of R_PWR on F.Silkscreen
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(27.0800 mm, 135.3700 mm): Segment of R_PWR on F.Silkscreen
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(49.6300 mm, 52.4300 mm): Segment of R_LED2 on F.Silkscreen
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(49.9600 mm, 58.9700 mm): Segment of R_LED2 on F.Silkscreen
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(52.0400 mm, 58.9700 mm): Segment of R_LED2 on F.Silkscreen
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(52.3700 mm, 52.4300 mm): Segment of R_LED2 on F.Silkscreen
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(49.6300 mm, 24.4300 mm): Segment of R_LED1 on F.Silkscreen
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(49.9600 mm, 30.9700 mm): Segment of R_LED1 on F.Silkscreen
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(52.0400 mm, 30.9700 mm): Segment of R_LED1 on F.Silkscreen
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(52.3700 mm, 24.4300 mm): Segment of R_LED1 on F.Silkscreen
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(48.4600 mm, 79.8900 mm): Arc of Q3 on F.Silkscreen
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(48.4600 mm, 79.8900 mm): Arc of Q3 on F.Silkscreen
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(22.0000 mm, 95.2700 mm): Arc of LED_STAT on F.Silkscreen
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(22.0000 mm, 95.2700 mm): Arc of LED_STAT on F.Silkscreen
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(18.5400 mm, 23.9600 mm): Segment of RDIV2 on F.Silkscreen
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(18.5400 mm, 26.0400 mm): Segment of RDIV2 on F.Silkscreen
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(25.0800 mm, 23.6300 mm): Segment of RDIV2 on F.Silkscreen
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(25.0800 mm, 26.3700 mm): Segment of RDIV2 on F.Silkscreen
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(48.4600 mm, 23.8900 mm): Arc of Q1 on F.Silkscreen
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(48.4600 mm, 23.8900 mm): Arc of Q1 on F.Silkscreen
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(26.7300 mm, 134.0000 mm): Arc of LED_PWR on F.Silkscreen
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(26.7300 mm, 134.0000 mm): Arc of LED_PWR on F.Silkscreen
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(49.6300 mm, 80.4300 mm): Segment of R_LED3 on F.Silkscreen
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(49.9600 mm, 86.9700 mm): Segment of R_LED3 on F.Silkscreen
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(52.0400 mm, 86.9700 mm): Segment of R_LED3 on F.Silkscreen
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(52.3700 mm, 80.4300 mm): Segment of R_LED3 on F.Silkscreen
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(18.5400 mm, 18.9600 mm): Segment of RDIV1 on F.Silkscreen
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(18.5400 mm, 21.0400 mm): Segment of RDIV1 on F.Silkscreen
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(25.0800 mm, 18.6300 mm): Segment of RDIV1 on F.Silkscreen
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(25.0800 mm, 21.3700 mm): Segment of RDIV1 on F.Silkscreen
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(48.4600 mm, 51.8900 mm): Arc of Q2 on F.Silkscreen
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(48.4600 mm, 51.8900 mm): Arc of Q2 on F.Silkscreen
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(49.6300 mm, 108.4300 mm): Segment of R_LED4 on F.Silkscreen
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(49.9600 mm, 114.9700 mm): Segment of R_LED4 on F.Silkscreen
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(52.0400 mm, 114.9700 mm): Segment of R_LED4 on F.Silkscreen
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(52.3700 mm, 108.4300 mm): Segment of R_LED4 on F.Silkscreen
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(48.4600 mm, 107.8900 mm): Arc of Q4 on F.Silkscreen
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(48.4600 mm, 107.8900 mm): Arc of Q4 on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(9.3800 mm, 87.5400 mm): Segment of J_PIR on F.Silkscreen
+    @(8.0000 mm, 88.0000 mm): PCB text 'PIR SENSOR' on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(20.6300 mm, 101.4600 mm): Segment of R_STAT on F.Silkscreen
+    @(22.0000 mm, 95.2700 mm): Arc of LED_STAT on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(22.0000 mm, 95.2700 mm): Arc of LED_STAT on F.Silkscreen
+    @(20.6300 mm, 101.4600 mm): Segment of R_STAT on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(23.3700 mm, 101.4600 mm): Segment of R_STAT on F.Silkscreen
+    @(22.0000 mm, 95.2700 mm): Arc of LED_STAT on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(23.3700 mm, 101.4600 mm): Segment of R_STAT on F.Silkscreen
+    @(22.0000 mm, 95.2700 mm): Arc of LED_STAT on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(20.6300 mm, 94.9200 mm): Segment of R_STAT on F.Silkscreen
+    @(22.0000 mm, 95.2700 mm): Arc of LED_STAT on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(23.3700 mm, 94.9200 mm): Segment of R_STAT on F.Silkscreen
+    @(22.0000 mm, 95.2700 mm): Arc of LED_STAT on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(48.4600 mm, 79.8900 mm): Arc of Q3 on F.Silkscreen
+    @(49.6300 mm, 86.9700 mm): Segment of R_LED3 on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(49.6300 mm, 114.9700 mm): Segment of R_LED4 on F.Silkscreen
+    @(48.4600 mm, 107.8900 mm): Arc of Q4 on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(54.0000 mm, 104.0000 mm): PCB text 'CH4 (GPIO 18)' on F.Silkscreen
+    @(58.0000 mm, 105.0000 mm): PCB text 'J4: CH4 5V LINK' on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(26.7300 mm, 134.0000 mm): Arc of LED_PWR on F.Silkscreen
+    @(20.5400 mm, 132.6300 mm): Segment of R_PWR on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(26.7300 mm, 134.0000 mm): Arc of LED_PWR on F.Silkscreen
+    @(20.5400 mm, 132.6300 mm): Segment of R_PWR on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(20.5400 mm, 135.3700 mm): Segment of R_PWR on F.Silkscreen
+    @(26.7300 mm, 134.0000 mm): Arc of LED_PWR on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(26.7300 mm, 134.0000 mm): Arc of LED_PWR on F.Silkscreen
+    @(20.5400 mm, 135.3700 mm): Segment of R_PWR on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(27.0800 mm, 132.6300 mm): Segment of R_PWR on F.Silkscreen
+    @(26.7300 mm, 134.0000 mm): Arc of LED_PWR on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(27.0800 mm, 135.3700 mm): Segment of R_PWR on F.Silkscreen
+    @(26.7300 mm, 134.0000 mm): Arc of LED_PWR on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(48.4600 mm, 23.8900 mm): Arc of Q1 on F.Silkscreen
+    @(49.6300 mm, 30.9700 mm): Segment of R_LED1 on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(54.0000 mm, 48.0000 mm): PCB text 'CH2 (GPIO 22)' on F.Silkscreen
+    @(58.0000 mm, 49.0000 mm): PCB text 'J2: CH2 5V LINK' on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(48.4600 mm, 51.8900 mm): Arc of Q2 on F.Silkscreen
+    @(49.6300 mm, 58.9700 mm): Segment of R_LED2 on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(58.0000 mm, 77.0000 mm): PCB text 'J3: CH3 5V LINK' on F.Silkscreen
+    @(54.0000 mm, 76.0000 mm): PCB text 'CH3 (GPIO 19)' on F.Silkscreen
+
+** Found 1 unconnected pads **
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(4.0000 mm, 14.0000 mm): Track [GND] on B.Cu, length 111.0000 mm
+    @(28.0000 mm, 134.0000 mm): Track [GND] on B.Cu, length 24.0000 mm
+
+** Found 0 Footprint errors **
+
+** Ignored checks **
+    - Footprint has no courtyard defined
+    - Track endpoint not centered on via
+    - Tuning profile track geometries
+    - Footprint doesn't match symbol's footprint filters
+    - Footprint component type doesn't match footprint pads
+
+** End of Report **

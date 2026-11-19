@@ -1,0 +1,23 @@
+{
+  "name": "home-auto-server",
+  "version": "1.0.0",
+  "description": "Home Automation & Security Dashboard Server",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "aedes": "^0.51.3",
+    "cors": "^2.8.5",
+    "express": "^4.21.0",
+    "mqtt": "^5.10.0",
+    "selfsigned": "^5.5.0",
+    "sql.js": "^1.11.0",
+    "vosk": "^0.3.39",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
